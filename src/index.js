@@ -1,12 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import "./assets/fonts/Montserrat-Regular.ttf";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { applyMiddleware, compose, createStore } from "redux";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import { Provider } from "react-redux";
+import React from "react";
+import ReactDOM from "react-dom";
+import Routes from "./routes";
+import reducers from "./reducers";
+import reduxThunk from "redux-thunk";
+
+const composeEnchancers =
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(
+  reducers,
+  composeEnchancers(applyMiddleware(reduxThunk))
+);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Routes />
+  </Provider>,
+  document.querySelector("#root")
+);

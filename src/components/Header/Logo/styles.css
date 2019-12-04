@@ -1,0 +1,17 @@
+.logo {
+    display: flex;
+    flex-direction: collum;
+}
+.logo .title{
+    flex-direction: row;
+}
+.logo .title h1{
+    font-size: 16px;
+    font-weight: bold;
+    color: #a5703b;
+}
+.logo .title h2{
+    font-size: 7px;
+    color: #ef7460;
+}
+
