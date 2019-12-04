@@ -2,7 +2,9 @@
 <br>RUN "$npm install" or "$yarn install" on project directory<br>
 <br>RUN  "$npm start" or "$yarn start</br>
 
-
+<br/>
+<br/>
+<br/>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
